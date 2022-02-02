@@ -9,7 +9,7 @@
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white ">
             <div class="container">
                 <img src="~/images/logo.jpeg" width="70" height="70" />
                 <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">EduHub</a>
@@ -19,18 +19,19 @@
                 </button>
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
+                        <a class="nav-link  underline-hover-effect" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                         <a class="nav-link underline-hover-effect" asp-area="" asp-controller="Home" asp-action="Privacy">AboutUs</a>
+                         <a class="nav-link underline-hover-effect" asp-area="" asp-controller="Home" asp-action="Help">Help</a>
+                          <a class="nav-link  underline-hover-effect" asp-area="" asp-controller="Home" asp-action="Pricing">Pricing</a>
                     </ul>
-                    <partial name="_LoginPartial" />
+                   <ul class="navbar-nav">
+               <partial name="_LoginPartial" />
+          </ul>
                 </div>
             </div>
         </nav>
     </header>
+     <partial name="_SecondHeader" />
     <div class="container">
         <main role="main" class="pb-3">
             @RenderBody()

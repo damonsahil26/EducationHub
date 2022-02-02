@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31912.275
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EduHub", "EduHub\EduHub.csproj", "{7797A55E-4891-42E0-AD2B-8910A295F9D8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EduHub", "EduHub\EduHub.csproj", "{7797A55E-4891-42E0-AD2B-8910A295F9D8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
