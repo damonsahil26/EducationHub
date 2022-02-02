@@ -69,3 +69,87 @@ body {
   white-space: nowrap;
   line-height: 60px; /* Vertically center the text there */
 }
+
+#privacy{
+    color:orange !important;
+}
+
+
+.underline-hover-effect {
+    display: inline-block;
+    padding-bottom: 0.25rem; /* defines the space between text and underline */
+    position: relative;
+}
+ .underline-hover-effect::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 0;
+        height: 1px;
+      background:black;
+        transition: width 0.25s ease-out;
+    }
+
+ .underline-hover-effect:hover::before {
+        width: 100%;
+    }
+.search--full input[type="search"] {
+    border: 1px solid #FFFFFF;
+}
+.search input[type="search"] {
+    border: 1px solid #ddd;
+    border-radius: 30px;
+    box-sizing: border-box;
+    color: #999;
+    height: 40px;
+    padding-left: 40px;
+    padding-right: 20px;
+    -webkit-appearance: none;
+    width: 100%;
+}
+input {
+    font-weight: 300;
+    max-width: 100%;
+    box-sizing: border-box;
+    outline: none;
+    transition: border .12s ease-in-out;
+}
+.search--full {
+    margin-top: 10px;
+}
+.search {
+    position: relative;
+}
+.login {
+    width: 20%;
+    margin-top: 39.5%;
+    margin-left: 35%;
+}
+.d-flex {
+    display: flex !important;
+}
+.container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+    width: 100%;
+    padding-right: var(--bs-gutter-x,.75rem);
+    padding-left: var(--bs-gutter-x,.75rem);
+    margin-right: auto;
+    margin-left: auto;
+}
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+
+.tpt-frontend .SearchAutosuggestBespoke__button {
+    color: #fff;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: #0aa96c;
+    height: 41px;
+    width: 51px;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    cursor: pointer;
+}
+
