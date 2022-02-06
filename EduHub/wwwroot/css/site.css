@@ -153,3 +153,16 @@ input {
     cursor: pointer;
 }
 
+.btn.style-google {
+    width: 180px;
+    border: none;
+    border-radius: 5px;
+    background: #F44336
+}
+
+.btn.style-facebook {
+    width: 180px;
+    border: none;
+    border-radius: 5px;
+    background: #01579B
+}

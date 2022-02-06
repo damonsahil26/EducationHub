@@ -43,7 +43,7 @@
                 <input asp-for="Input.ConfirmPassword" class="form-control" />
                 <span asp-validation-for="Input.ConfirmPassword" class="text-danger"></span>
             </div>
-            <button type="submit" class="btn btn-primary">Register</button>
+            <button type="submit" class="btn btn-success">Register</button>
         </form>
     </div>
     <div class="col-md-6 col-md-offset-2">
@@ -67,7 +67,8 @@
                             <p>
                                 @foreach (var provider in Model.ExternalLogins)
                                 {
-                                    <button type="submit" class="btn btn-primary" name="provider" value="@provider.Name" title="Log in using your @provider.DisplayName account">@provider.DisplayName</button>
+                                     var providerStyleClass = "style-" + provider.DisplayName.ToLower();
+                                    <button type="submit" class="btn btn-primary @providerStyleClass" name="provider" value="@provider.Name" title="Log in using your @provider.DisplayName account"><i class="fa fa-@provider.DisplayName.ToLower()"></i> @provider.DisplayName</button>
                                 }
                             </p>
                         </div>
