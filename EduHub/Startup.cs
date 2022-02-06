@@ -1,6 +1,7 @@
 using EduHub.Data;
 using EduHub.Models;
 using EduHub.Services;
+using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -14,6 +15,7 @@ using Microsoft.Extensions.Hosting;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Claims;
 using System.Threading.Tasks;
 
 namespace EduHub
@@ -52,6 +54,9 @@ namespace EduHub
             {
                 googleOptions.ClientId = Configuration["Authentication:Google:ClientId"];
                 googleOptions.ClientSecret = Configuration["Authentication:Google:ClientSecret"];
+                googleOptions.ClaimActions.MapJsonKey("urn:google:picture", "picture", "url");
+                googleOptions.ClaimActions.MapJsonKey("urn:google:locale", "locale", "string");
+                googleOptions.ClaimActions.MapJsonKey(ClaimTypes.Country,"country");
             });
             services.AddAuthentication().AddFacebook(facebookOptions =>
             {
